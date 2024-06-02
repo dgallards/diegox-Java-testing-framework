@@ -29,8 +29,18 @@ public class Cura {
 
     @Test
     public void testCuraMain() {
-        MainPage mainPage = new mainPage(driver)
-        test.log(Status.INFO, "Page working as expected'");
+        MainPage mainPage = new MainPage(driver)
+
+        mainPage.openMenu();
+        test.log(Status.INFO, "Menu opened");
+        
+        mainPage.clickLoginLink();
+        test.log(Status.INFO, "Login link clicked");
+
+        mainPage.enterUsername("John Doe");
+        mainPage.enterPassword("ThisIsNotAPassword");
+        mainPage.clickLoginButton();
+        test.log(Status.INFO, "Login performed");
         test.pass("Test passed");
     }
 
