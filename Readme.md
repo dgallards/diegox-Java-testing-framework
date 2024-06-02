@@ -23,7 +23,7 @@ my-automation-framework
         │   └───com
         │       └───cases
         └───resources
-
+```
 ## Dependencias
 
 ### Maven
