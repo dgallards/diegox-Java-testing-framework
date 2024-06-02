@@ -20,8 +20,6 @@ public class MainPage {
     @FindBy(id = "txt-password")
     WebElement passwordField;
 
-    @FindBy(id = "btn-login")
-    WebElement loginButton;
 
     public MainPage(WebDriver driver) {
         this.driver = driver;
@@ -30,10 +28,6 @@ public class MainPage {
 
     public void openMenu() {
         menuToggle.click();
-    }
-
-    public void clickLoginLink() {
-        loginLink.click();
     }
 
     public void enterUsername(String username) {

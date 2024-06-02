@@ -10,6 +10,7 @@ public class ExtentManager {
         if (extent == null) {
             extent = new ExtentReports();
             ExtentSparkReporter sparkReporter = new ExtentSparkReporter("target/ExtentReports.html");
+            
             sparkReporter.config().setReportName("Automation Test Results");
             sparkReporter.config().setDocumentTitle("Test Report");
             extent.attachReporter(sparkReporter);
